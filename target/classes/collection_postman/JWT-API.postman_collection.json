@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "19559119-82b7-432e-a118-853ecf032d46",
+		"name": "SPRINGJWT-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "/api/v1/attendance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJtZWRpY29AZW1haWwuY29tIiwiZXhwIjoxNjU2OTgzNTgzfQ.VbgOWVRcbZ9ivuqH-5Mwz4LtdftB-qfNOADmd31NXsCMA4aapKZJtDEuypYUczlcbPURdYxCIUTFbvfgvBUVWA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"dataHora\": \"18-12-2023 09:11:38\",\n  \"cliente\": {\n    \"nome\": \"Natan\",\n    \"cpf\": \"51049212045\"\n  }\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/attendance",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"attendance"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/signup",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"gerente@email.com\",\n  \"senha\": \"password\",\n  \"confirmacaoSenha\": \"password\",\n  \"especialidade\": \"Cardiologista\",\n  \"cpf\": \"51049212045\",\n  \"dataNascimento\": \"2010-06-12\",\n  \"telefone\": \"(21) 3232-6565\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "/api/v1/login",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "  {\n    \"email\":\"gerente@email.com\",\n    \"senha\": \"password\"\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
